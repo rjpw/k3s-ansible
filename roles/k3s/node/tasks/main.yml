@@ -8,6 +8,14 @@
     group: root
     mode: 0755
 
+- name: Copy K3s registries file
+  template:
+    src: "registries.yaml.j2"
+    dest: "{{ k3s_config_dir }}/registries.yaml"
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Enable and check K3s service
   systemd:
     name: k3s-node

@@ -1,0 +1,9 @@
+mirrors:
+  docker.io:
+    endpoint:
+      - "{{ registry_http_scheme }}:{{ registry_hostname }}"
+configs:
+  "{{ registry_hostname }}":
+  auth:
+    username: {{ registry_username }}
+    password: {{ registry_password }}
