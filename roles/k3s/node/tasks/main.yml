@@ -8,6 +8,11 @@
     group: root
     mode: 0755
 
+- name: Create K3S config directory
+  file:
+    path: "{{ k3s_config_dir }}"
+    state: directory
+
 - name: Copy K3s registries file
   template:
     src: "registries.yaml.j2"
