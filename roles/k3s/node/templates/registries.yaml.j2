@@ -4,6 +4,6 @@ mirrors:
       - "{{ registry_http_scheme }}:{{ registry_hostname }}"
 configs:
   "{{ registry_hostname }}":
-  auth:
-    username: {{ registry_username }}
-    password: {{ registry_password }}
+    auth:
+        username: "{{ registry_username }}"
+        password: "{{ registry_password }}"
