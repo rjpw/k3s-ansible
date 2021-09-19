@@ -1,7 +1,7 @@
 mirrors:
   "{{ registry_hostname }}":
     endpoint:
-      - "{{ registry_http_scheme }}:{{ registry_hostname }}"
+      - "{{ registry_http_scheme }}://{{ registry_hostname }}"
 configs:
   "{{ registry_hostname }}":
     auth:
